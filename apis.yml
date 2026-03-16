@@ -1,0 +1,52 @@
+aid: apptio
+name: Apptio
+description: >-
+  Apptio is a technology business management platform that helps organizations
+  understand the cost, value, and quality of their technology investments. It
+  provides financial management, planning, and analytics capabilities for IT
+  organizations, enabling data-driven decision-making around technology spending
+  and resource allocation.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Technology Business Management
+  - IT Finance
+  - Cost Management
+  - Analytics
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apptio/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: apptio:apptio-api
+    name: Apptio API
+    description: >-
+      The Apptio API provides programmatic access to technology business
+      management data, enabling integration of cost and financial data with
+      other enterprise systems and workflows.
+    humanURL: https://www.apptio.com/
+    baseURL: https://api.apptio.com
+    tags:
+      - Technology Business Management
+      - IT Finance
+      - Cost Management
+    properties:
+      - type: Documentation
+        url: https://developer.apptio.com/
+      - type: Getting Started
+        url: https://developer.apptio.com/getting-started
+common:
+  - type: Website
+    url: https://www.apptio.com/
+  - type: Documentation
+    url: https://developer.apptio.com/
+  - type: Blog
+    url: https://www.apptio.com/blog/
+  - type: Sign Up
+    url: https://www.apptio.com/request-demo/
+  - type: GitHub Organization
+    url: https://github.com/apptio
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
