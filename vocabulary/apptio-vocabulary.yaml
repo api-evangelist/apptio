@@ -1,0 +1,124 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Apptio
+  description: >-
+    Vocabulary for the Apptio technology business management platform, covering
+    IT cost allocation, budget planning, financial reporting, and technology
+    investment analytics for IT finance organizations.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: Apptio API
+      namespace: apptio
+      version: "1.0.0"
+      baseUrl: "https://api.apptio.com/v1"
+      status: active
+
+  resources:
+    - name: cost-allocations
+      description: Technology cost allocation records by cost center and period
+      api: Apptio API
+      actions:
+        - list
+        - get
+        - create
+    - name: budgets
+      description: IT budget plans with spending tracking
+      api: Apptio API
+      actions:
+        - list
+        - get
+        - create
+    - name: reports
+      description: Financial and technology management reports
+      api: Apptio API
+      actions:
+        - list
+        - get
+
+  actions:
+    - name: list
+      httpMethod: GET
+      pattern: read
+    - name: get
+      httpMethod: GET
+      pattern: read
+    - name: create
+      httpMethod: POST
+      pattern: write
+
+  schemas:
+    core:
+      - name: CostAllocation
+        description: Technology cost allocation record by period and cost center
+      - name: Budget
+        description: IT budget plan with total and spent amounts
+      - name: Report
+        description: Financial or technology management report
+
+  parameters:
+    identifiers:
+      - name: allocationId
+        description: Unique cost allocation identifier
+      - name: budgetId
+        description: Unique budget identifier
+      - name: reportId
+        description: Unique report identifier
+    filters:
+      - name: period
+        description: Reporting period filter (YYYY-MM)
+      - name: costCenter
+        description: Cost center or department filter
+      - name: fiscalYear
+        description: Fiscal year filter
+
+  enums:
+    costCategories:
+      - Cloud Infrastructure
+      - Software Licenses
+      - Labor
+      - Consulting
+      - Hardware
+      - Networking
+    reportTypes:
+      - cost-trend
+      - allocation
+      - variance
+      - benchmark
+
+  authentication:
+    schemes:
+      - type: bearer
+        description: Bearer token authentication for API access
+
+capability:
+  workflows:
+    - name: IT Cost Management
+      description: Analyze technology spending and manage IT budgets with Apptio
+      resources:
+        - cost-allocations
+        - budgets
+  personas:
+    - name: IT Finance Manager
+      description: Manages technology cost allocations and budget planning
+    - name: CTO or CIO
+      description: Reviews technology investment performance and cost trends
+  domains:
+    - name: Cost Allocation
+      description: Tracking and allocating technology costs by department
+      resources:
+        - cost-allocations
+    - name: Budget Management
+      description: Planning and monitoring IT budget spending
+      resources:
+        - budgets
+    - name: Reporting
+      description: Generating financial and technology management reports
+      resources:
+        - reports
+
+  namespaces: []
+  binds: []

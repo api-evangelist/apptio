@@ -1,50 +1,56 @@
 # Apptio (apptio)
-Apptio is a technology business management platform that helps organizations understand the cost, value, and quality of their technology investments. It provides financial management, planning, and analytics capabilities for IT organizations, enabling data-driven decision-making around technology spending and resource allocation.
+
+Apptio is a technology business management platform that helps organizations understand the cost, value, and quality of their technology investments. It provides financial management, planning, and analytics capabilities for IT organizations, enabling data-driven decision-making around technology spending, budget planning, and resource allocation.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/apptio/refs/heads/main/apis.yml)
 
-## Scope
+## Scope of Coverage
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+| Item | Count |
+|------|-------|
+| APIs | 1 |
+| OpenAPI Specs | 1 |
+| JSON Schemas | 1 |
+| JSON Structures | 1 |
+| Examples | 1 |
+| JSON-LD Contexts | 1 |
+| Spectral Rulesets | 1 |
+| Naftiko Capabilities | 2 |
+| Vocabularies | 1 |
 
-## Tags:
+## APIs Covered
 
- - Technology Business Management, IT Finance, Cost Management, Analytics
+- **Apptio API** — Technology business management API for cost allocations, IT budgets, and financial reporting.
 
-## Timestamps
+## Artifacts
 
-- **Created:** 2026-03-16 
-- **Modified:** 2026-03-16 
+### OpenAPI Specifications
+- [openapi/apptio-openapi.yaml](openapi/apptio-openapi.yaml)
 
-## APIs
+### JSON Schemas
+- [json-schema/cost-allocation-schema.json](json-schema/cost-allocation-schema.json)
 
-### Apptio API
-The Apptio API provides programmatic access to technology business management data, enabling integration of cost and financial data with other enterprise systems and workflows.
+### JSON Structures
+- [json-structure/cost-allocation-structure.json](json-structure/cost-allocation-structure.json)
 
-**Human URL:** [https://www.apptio.com/](https://www.apptio.com/)
+### Examples
+- [examples/cost-allocation-example.json](examples/cost-allocation-example.json)
 
+### JSON-LD
+- [json-ld/apptio-context.jsonld](json-ld/apptio-context.jsonld)
 
-#### Tags:
+### Spectral Rules
+- [rules/apptio-spectral-rules.yml](rules/apptio-spectral-rules.yml)
 
- - Technology Business Management, IT Finance, Cost Management
+### Naftiko Capabilities
+- [capabilities/shared/apptio-api.yaml](capabilities/shared/apptio-api.yaml)
+- [capabilities/it-cost-management.yaml](capabilities/it-cost-management.yaml)
 
-#### Properties
-
-- [Documentation](https://developer.apptio.com/)
-- [Getting Started](https://developer.apptio.com/getting-started)
-
-## Common Properties
-
-- [Website](https://www.apptio.com/)
-- [Documentation](https://developer.apptio.com/)
-- [Blog](https://www.apptio.com/blog/)
-- [Sign Up](https://www.apptio.com/request-demo/)
-- [GitHub Organization](https://github.com/apptio)
+### Vocabulary
+- [vocabulary/apptio-vocabulary.yaml](vocabulary/apptio-vocabulary.yaml)
 
 ## Maintainers
 
-**FN:** Kin Lane
+**FN:** API Evangelist
 
-**Email:** kin@apievangelist.com
+**Email:** info@apievangelist.com

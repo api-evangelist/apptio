@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "apptio": "https://www.apptio.com/vocab#",
+    "allocationId": "schema:identifier",
+    "costCenter": "apptio:costCenter",
+    "category": "schema:category",
+    "period": "apptio:period",
+    "amount": "schema:price",
+    "currency": "schema:priceCurrency",
+    "vendor": "schema:provider",
+    "tags": "apptio:tags",
+    "budgetId": "schema:identifier",
+    "name": "schema:name",
+    "fiscalYear": "apptio:fiscalYear",
+    "totalBudget": "apptio:totalBudget",
+    "spentAmount": "apptio:spentAmount",
+    "reportId": "schema:identifier",
+    "status": "apptio:status"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "allocationId": "ALLOC-2026-Q1-001",
+  "costCenter": "Engineering",
+  "category": "Cloud Infrastructure",
+  "period": "2026-01",
+  "amount": 125000.0,
+  "currency": "USD",
+  "vendor": "AWS",
+  "tags": {
+    "environment": "production",
+    "team": "platform"
+  }
+}

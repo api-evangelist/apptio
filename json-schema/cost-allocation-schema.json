@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apptio/main/json-schema/cost-allocation-schema.json",
+  "title": "CostAllocation",
+  "description": "A cost allocation record tracking technology spending in Apptio",
+  "type": "object",
+  "properties": {
+    "allocationId": {
+      "type": "string",
+      "description": "Unique cost allocation identifier"
+    },
+    "costCenter": {
+      "type": "string",
+      "description": "Cost center or department receiving the allocation"
+    },
+    "category": {
+      "type": "string",
+      "description": "Technology cost category (infrastructure, software, labor, etc.)"
+    },
+    "period": {
+      "type": "string",
+      "description": "Reporting period (YYYY-MM)"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Allocated cost amount in USD"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD",
+      "description": "Currency code"
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Technology vendor or provider"
+    },
+    "tags": {
+      "type": "object",
+      "description": "Custom metadata tags for the allocation"
+    }
+  },
+  "required": [
+    "allocationId",
+    "costCenter",
+    "period",
+    "amount"
+  ]
+}

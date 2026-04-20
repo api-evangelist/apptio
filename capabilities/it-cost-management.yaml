@@ -1,0 +1,62 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: Apptio IT Cost Management
+  description: >-
+    Workflow capability for managing IT costs and technology investments using Apptio.
+    Supports IT finance teams analyzing technology spending, tracking budgets, and
+    generating cost allocation reports for business stakeholders.
+  tags:
+    - Apptio
+    - IT Finance
+    - Cost Management
+    - Technology Business Management
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      APPTIO_API_TOKEN: APPTIO_API_TOKEN
+
+capability:
+  consumes:
+    - import: apptio
+      location: ./shared/apptio-api.yaml
+
+  exposes:
+    - type: mcp
+      port: 9090
+      namespace: it-cost-mcp
+      transport: http
+      description: MCP server for AI-assisted IT cost management with Apptio.
+      tools:
+        - name: analyze-technology-costs
+          description: Lists and analyzes technology cost allocations by department and category
+          hints:
+            readOnly: true
+            idempotent: true
+          call: "apptio.list-cost-allocations"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: review-it-budgets
+          description: Reviews IT budget plans and tracks spending against targets
+          hints:
+            readOnly: true
+            idempotent: true
+          call: "apptio.list-budgets"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-financial-reports
+          description: Retrieves technology business management reports for executive review
+          hints:
+            readOnly: true
+            idempotent: true
+          call: "apptio.list-reports"
+          outputParameters:
+            - type: object
+              mapping: "$."
