@@ -1,0 +1,13 @@
+{
+  "repo": "apptio",
+  "feeds": [
+    {
+      "source": "https://www.apptio.com/blog/",
+      "feed_url": "https://www.apptio.com/feed/",
+      "saved": 10,
+      "title": "Apptio"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:22:27Z"
+}
