@@ -1,62 +1,110 @@
-naftiko: "1.0.0-alpha1"
-
+naftiko: 1.0.0-alpha2
 info:
   label: Apptio IT Cost Management
-  description: >-
-    Workflow capability for managing IT costs and technology investments using Apptio.
-    Supports IT finance teams analyzing technology spending, tracking budgets, and
-    generating cost allocation reports for business stakeholders.
+  description: Workflow capability for managing IT costs and technology investments using Apptio. Supports IT finance teams
+    analyzing technology spending, tracking budgets, and generating cost allocation reports for business stakeholders.
   tags:
-    - Apptio
-    - IT Finance
-    - Cost Management
-    - Technology Business Management
-  created: "2026-04-19"
-  modified: "2026-04-19"
-
+  - Apptio
+  - IT Finance
+  - Cost Management
+  - Technology Business Management
+  created: '2026-04-19'
+  modified: '2026-05-06'
 binds:
-  - namespace: env
-    keys:
-      APPTIO_API_TOKEN: APPTIO_API_TOKEN
-
+- namespace: env
+  keys:
+    APPTIO_API_TOKEN: APPTIO_API_TOKEN
 capability:
   consumes:
-    - import: apptio
-      location: ./shared/apptio-api.yaml
-
+  - type: http
+    namespace: apptio
+    baseUri: https://api.apptio.com/v1
+    description: Apptio TBM API
+    authentication:
+      type: bearer
+      token: '{{APPTIO_API_TOKEN}}'
+    resources:
+    - name: cost-allocations
+      path: /cost-allocations
+      description: Technology cost allocation records
+      operations:
+      - name: list-cost-allocations
+        method: GET
+        description: Returns cost allocation records
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: get-cost-allocation
+        method: GET
+        description: Returns a specific cost allocation
+        inputParameters:
+        - name: allocationId
+          in: path
+          type: string
+          required: true
+          description: Allocation identifier
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: budgets
+      path: /budgets
+      description: IT budget management
+      operations:
+      - name: list-budgets
+        method: GET
+        description: Returns IT budgets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: reports
+      path: /reports
+      description: Financial reports
+      operations:
+      - name: list-reports
+        method: GET
+        description: Returns available financial reports
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
-    - type: mcp
-      port: 9090
-      namespace: it-cost-mcp
-      transport: http
-      description: MCP server for AI-assisted IT cost management with Apptio.
-      tools:
-        - name: analyze-technology-costs
-          description: Lists and analyzes technology cost allocations by department and category
-          hints:
-            readOnly: true
-            idempotent: true
-          call: "apptio.list-cost-allocations"
-          outputParameters:
-            - type: object
-              mapping: "$."
-
-        - name: review-it-budgets
-          description: Reviews IT budget plans and tracks spending against targets
-          hints:
-            readOnly: true
-            idempotent: true
-          call: "apptio.list-budgets"
-          outputParameters:
-            - type: object
-              mapping: "$."
-
-        - name: get-financial-reports
-          description: Retrieves technology business management reports for executive review
-          hints:
-            readOnly: true
-            idempotent: true
-          call: "apptio.list-reports"
-          outputParameters:
-            - type: object
-              mapping: "$."
+  - type: mcp
+    port: 9090
+    namespace: it-cost-mcp
+    transport: http
+    description: MCP server for AI-assisted IT cost management with Apptio.
+    tools:
+    - name: analyze-technology-costs
+      description: Lists and analyzes technology cost allocations by department and category
+      hints:
+        readOnly: true
+        idempotent: true
+      call: apptio.list-cost-allocations
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: review-it-budgets
+      description: Reviews IT budget plans and tracks spending against targets
+      hints:
+        readOnly: true
+        idempotent: true
+      call: apptio.list-budgets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-financial-reports
+      description: Retrieves technology business management reports for executive review
+      hints:
+        readOnly: true
+        idempotent: true
+      call: apptio.list-reports
+      outputParameters:
+      - type: object
+        mapping: $.
