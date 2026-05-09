@@ -3,11 +3,11 @@
   "feeds": [
     {
       "source": "https://www.apptio.com/blog/",
-      "feed_url": "https://www.apptio.com/feed/",
-      "saved": 10,
-      "title": "Apptio"
+      "feed_url": "https://www.apptio.com/blog/feed/",
+      "title": "Comments on: Apptio Blog",
+      "saved": 0
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:22:27Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
