@@ -60,6 +60,11 @@ common:
   url: https://www.apptio.com/request-demo/
 - type: GitHub Organization
   url: https://github.com/apptio
+- type: Integrations
+  url: https://www.apptio.com/company/partners/
+integrations:
+  - name: Apptio
+  - name: ApptioCareers-Employee[1]
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
