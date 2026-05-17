@@ -56,9 +56,9 @@ common:
   url: https://developer.apptio.com/
 - type: Blog
   url: https://www.apptio.com/blog/
-- type: Sign Up
+- type: SignUp
   url: https://www.apptio.com/request-demo/
-- type: GitHub Organization
+- type: GitHubOrganization
   url: https://github.com/apptio
 - type: Integrations
   url: https://www.apptio.com/company/partners/
