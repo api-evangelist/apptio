@@ -50,6 +50,8 @@ apis:
     type: Vocabulary
   description: API for the Apptio technology business management platform providing programmatic access to cost allocations, IT budgets, and financial reporting for technology organizations.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/apptio-an-ibm-company
 - type: Website
   url: https://www.apptio.com/
 - type: Documentation
