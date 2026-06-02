@@ -2,13 +2,17 @@
   "repo": "apptio",
   "feeds": [
     {
-      "source": "https://www.apptio.com/blog/",
+      "source": "https://www.apptio.com/blog/feed/",
       "feed_url": "https://www.apptio.com/blog/feed/",
-      "title": "Comments on: Apptio Blog",
+      "title": "",
       "saved": 0,
-      "last_error": "parse_error"
+      "method": "feed"
+    },
+    {
+      "source": "https://developer.apptio.com/",
+      "error": "URLError"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
