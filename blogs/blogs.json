@@ -2,10 +2,10 @@
   "repo": "apptio",
   "feeds": [
     {
-      "source": "https://www.apptio.com/blog/feed/",
-      "feed_url": "https://www.apptio.com/blog/feed/",
+      "source": "https://www.apptio.com/feed/",
+      "feed_url": "https://www.apptio.com/feed/",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     },
     {
@@ -13,6 +13,6 @@
       "error": "URLError"
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 11,
+  "fetched": "2026-06-27T12:03:07Z"
 }
