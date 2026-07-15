@@ -50,6 +50,8 @@ apis:
       type: Vocabulary
     description: API for the Apptio technology business management platform providing programmatic access to cost allocations, IT budgets, and financial reporting for technology organizations.
 common:
+  - type: AgenticAccess
+    url: agentic-access/apptio-agentic-access.yml
   - type: DomainSecurity
     url: security/apptio-domain-security.yml
   - type: Authentication
