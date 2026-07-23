@@ -1,0 +1,82 @@
+openapi: 3.0.3
+info:
+  title: Apptio Technology Business Management Budgets Reports API
+  description: API for the Apptio technology business management platform, providing programmatic access to cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and planning teams.
+  version: 1.0.0
+  contact:
+    name: Apptio Developer
+    url: https://developer.apptio.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.apptio.com/v1
+  description: Apptio TBM API
+security:
+- bearerAuth: []
+tags:
+- name: Reports
+  description: Financial reporting and analytics
+paths:
+  /reports:
+    get:
+      operationId: listReports
+      summary: Apptio - List Reports
+      description: Returns a list of available financial and technology management reports
+      tags:
+      - Reports
+      responses:
+        '200':
+          description: A list of reports
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Report'
+              examples:
+                ListReportsExample:
+                  x-microcks-default: true
+                  summary: Example reports list
+                  value:
+                    data:
+                    - reportId: RPT-COST-TREND-2026
+                      name: IT Cost Trend Analysis Q1 2026
+                      type: cost-trend
+                      period: Q1 2026
+                      status: ready
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+components:
+  schemas:
+    Report:
+      title: Report
+      description: An Apptio financial or technology management report
+      type: object
+      properties:
+        reportId:
+          type: string
+          description: Unique report identifier
+        name:
+          type: string
+          description: Report name
+        type:
+          type: string
+          description: Report type (cost-trend, allocation, variance, etc.)
+        period:
+          type: string
+          description: Report period
+        status:
+          type: string
+          enum:
+          - generating
+          - ready
+          - failed
+          description: Report generation status
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

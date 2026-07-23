@@ -1,0 +1,149 @@
+openapi: 3.0.3
+info:
+  title: Apptio Technology Business Management Budgets Cost Allocations API
+  description: API for the Apptio technology business management platform, providing programmatic access to cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and planning teams.
+  version: 1.0.0
+  contact:
+    name: Apptio Developer
+    url: https://developer.apptio.com
+  license:
+    name: Proprietary
+servers:
+- url: https://api.apptio.com/v1
+  description: Apptio TBM API
+security:
+- bearerAuth: []
+tags:
+- name: Cost Allocations
+  description: Technology cost allocation management
+paths:
+  /cost-allocations:
+    get:
+      operationId: listCostAllocations
+      summary: Apptio - List Cost Allocations
+      description: Returns a list of technology cost allocations by period and cost center
+      tags:
+      - Cost Allocations
+      parameters:
+      - name: period
+        in: query
+        description: Filter by reporting period (YYYY-MM format)
+        schema:
+          type: string
+      - name: costCenter
+        in: query
+        description: Filter by cost center or department
+        schema:
+          type: string
+      - name: category
+        in: query
+        description: Filter by technology cost category
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of cost allocations
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CostAllocation'
+                  total:
+                    type: number
+                    description: Total allocated amount
+              examples:
+                ListAllocationsExample:
+                  x-microcks-default: true
+                  summary: Example cost allocations list
+                  value:
+                    data:
+                    - allocationId: ALLOC-2026-Q1-001
+                      costCenter: Engineering
+                      category: Cloud Infrastructure
+                      period: 2026-01
+                      amount: 125000.0
+                      currency: USD
+                      vendor: AWS
+                    total: 125000.0
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+  /cost-allocations/{allocationId}:
+    get:
+      operationId: getCostAllocation
+      summary: Apptio - Get Cost Allocation
+      description: Returns details for a specific cost allocation record
+      tags:
+      - Cost Allocations
+      parameters:
+      - name: allocationId
+        in: path
+        required: true
+        description: Unique cost allocation identifier
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Cost allocation details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CostAllocation'
+              examples:
+                GetAllocationExample:
+                  x-microcks-default: true
+                  summary: Example cost allocation detail
+                  value:
+                    allocationId: ALLOC-2026-Q1-001
+                    costCenter: Engineering
+                    category: Cloud Infrastructure
+                    period: 2026-01
+                    amount: 125000.0
+                    currency: USD
+                    vendor: AWS
+                    tags:
+                      environment: production
+                      team: platform
+        '404':
+          description: Cost allocation not found
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+components:
+  schemas:
+    CostAllocation:
+      title: CostAllocation
+      description: A technology cost allocation record
+      type: object
+      properties:
+        allocationId:
+          type: string
+          description: Unique allocation identifier
+        costCenter:
+          type: string
+          description: Cost center or department
+        category:
+          type: string
+          description: Technology cost category
+        period:
+          type: string
+          description: Reporting period (YYYY-MM)
+        amount:
+          type: number
+          description: Allocated cost amount
+        currency:
+          type: string
+          description: Currency code
+        vendor:
+          type: string
+          description: Technology vendor or provider
+        tags:
+          type: object
+          description: Custom metadata tags
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
