@@ -7,7 +7,20 @@ description: >-
   organizations, enabling data-driven decision-making around technology spending
   and resource allocation.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apptio.png
 tags:
   - Analytics
   - Cost Management
@@ -19,36 +32,87 @@ created: '2026-03-16'
 modified: '2026-04-19'
 specificationVersion: '0.19'
 apis:
-  - aid: apptio:apptio-api
-    name: Apptio API
-    tags:
-    - Technology Business Management
-    - IT Finance
-    - Cost Management
-    - Analytics
-    humanURL: https://developer.apptio.com/
-    properties:
-    - url: https://developer.apptio.com/
-      type: Documentation
-    - url: openapi/apptio-openapi.yaml
-      type: OpenAPI
-    - url: json-schema/cost-allocation-schema.json
-      type: JSONSchema
-    - url: json-structure/cost-allocation-structure.json
-      type: JSONStructure
-    - url: examples/cost-allocation-example.json
-      type: Examples
-    - url: json-ld/apptio-context.jsonld
-      type: JSONLD
-    - url: rules/apptio-spectral-rules.yml
-      type: SpectralRules
-    - url: capabilities/shared/apptio-api.yaml
-      type: X-NaftikoCapability
-    - url: capabilities/it-cost-management.yaml
-      type: X-NaftikoCapability
-    - url: vocabulary/apptio-vocabulary.yaml
-      type: Vocabulary
-    description: API for the Apptio technology business management platform providing programmatic access to cost allocations, IT budgets, and financial reporting for technology organizations.
+- aid: apptio:apptio-budgets-api
+  name: Apptio Budgets API
+  description: IT budget planning and tracking
+  humanURL: https://developer.apptio.com/
+  tags:
+  - Budgets
+  properties:
+  - type: OpenAPI
+    url: openapi/apptio-budgets-api-openapi.yml
+  - type: Documentation
+    url: https://developer.apptio.com/
+  - type: JSONSchema
+    url: json-schema/cost-allocation-schema.json
+  - type: JSONStructure
+    url: json-structure/cost-allocation-structure.json
+  - type: Examples
+    url: examples/cost-allocation-example.json
+  - type: JSONLD
+    url: json-ld/apptio-context.jsonld
+  - type: SpectralRules
+    url: rules/apptio-spectral-rules.yml
+  - type: X-NaftikoCapability
+    url: capabilities/shared/apptio-api.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/it-cost-management.yaml
+  - type: Vocabulary
+    url: vocabulary/apptio-vocabulary.yaml
+- aid: apptio:apptio-cost-allocations-api
+  name: Apptio Cost Allocations API
+  description: Technology cost allocation management
+  humanURL: https://developer.apptio.com/
+  tags:
+  - Cost Allocations
+  properties:
+  - type: OpenAPI
+    url: openapi/apptio-cost-allocations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.apptio.com/
+  - type: JSONSchema
+    url: json-schema/cost-allocation-schema.json
+  - type: JSONStructure
+    url: json-structure/cost-allocation-structure.json
+  - type: Examples
+    url: examples/cost-allocation-example.json
+  - type: JSONLD
+    url: json-ld/apptio-context.jsonld
+  - type: SpectralRules
+    url: rules/apptio-spectral-rules.yml
+  - type: X-NaftikoCapability
+    url: capabilities/shared/apptio-api.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/it-cost-management.yaml
+  - type: Vocabulary
+    url: vocabulary/apptio-vocabulary.yaml
+- aid: apptio:apptio-reports-api
+  name: Apptio Reports API
+  description: Financial reporting and analytics
+  humanURL: https://developer.apptio.com/
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/apptio-reports-api-openapi.yml
+  - type: Documentation
+    url: https://developer.apptio.com/
+  - type: JSONSchema
+    url: json-schema/cost-allocation-schema.json
+  - type: JSONStructure
+    url: json-structure/cost-allocation-structure.json
+  - type: Examples
+    url: examples/cost-allocation-example.json
+  - type: JSONLD
+    url: json-ld/apptio-context.jsonld
+  - type: SpectralRules
+    url: rules/apptio-spectral-rules.yml
+  - type: X-NaftikoCapability
+    url: capabilities/shared/apptio-api.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/it-cost-management.yaml
+  - type: Vocabulary
+    url: vocabulary/apptio-vocabulary.yaml
 common:
   - type: AgenticAccess
     url: agentic-access/apptio-agentic-access.yml
