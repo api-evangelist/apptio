@@ -1,0 +1,18 @@
+{
+  "provider": "apptio",
+  "sources": [
+    "apptio-budgets-api-openapi.yml",
+    "apptio-cost-allocations-api-openapi.yml",
+    "apptio-reports-api-openapi.yml"
+  ],
+  "outputs": [
+    "apptio-budgets-api-openapi.yml",
+    "apptio-cost-allocations-api-openapi.yml",
+    "apptio-reports-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
