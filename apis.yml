@@ -53,10 +53,6 @@ apis:
     url: json-ld/apptio-context.jsonld
   - type: SpectralRules
     url: rules/apptio-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/shared/apptio-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/it-cost-management.yaml
   - type: Vocabulary
     url: vocabulary/apptio-vocabulary.yaml
 - aid: apptio:apptio-cost-allocations-api
@@ -80,10 +76,6 @@ apis:
     url: json-ld/apptio-context.jsonld
   - type: SpectralRules
     url: rules/apptio-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/shared/apptio-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/it-cost-management.yaml
   - type: Vocabulary
     url: vocabulary/apptio-vocabulary.yaml
 - aid: apptio:apptio-reports-api
@@ -107,10 +99,6 @@ apis:
     url: json-ld/apptio-context.jsonld
   - type: SpectralRules
     url: rules/apptio-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/shared/apptio-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/it-cost-management.yaml
   - type: Vocabulary
     url: vocabulary/apptio-vocabulary.yaml
 common:
