@@ -1,0 +1,175 @@
+{
+  "item": [
+    {
+      "id": "f5c5c07c-eea1-4344-8d9d-01abeb3c46c2",
+      "name": "Budgets",
+      "description": {
+        "content": "IT budget planning and tracking",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "481404c3-77a6-41f6-abca-deadb697766a",
+          "name": "Apptio - List Budgets",
+          "request": {
+            "name": "Apptio - List Budgets",
+            "description": {
+              "content": "Returns a list of IT budget plans and their current spending status",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "budgets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fiscalYear",
+                  "value": "<integer>",
+                  "description": "Filter by fiscal year"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfe6b648-6171-4647-b032-13f483639aea",
+              "name": "A list of budgets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "budgets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fiscalYear",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"budgetId\": \"BUD-2026-ENG\",\n      \"name\": \"Engineering IT Budget 2026\",\n      \"fiscalYear\": 2026,\n      \"totalBudget\": 2000000,\n      \"spentAmount\": 375000,\n      \"currency\": \"USD\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0f762bf3-14c3-4d98-85af-dca64dfb8af7",
+              "name": "Unauthorized - invalid or missing authentication token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "budgets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fiscalYear",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.apptio.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "32e5a376-4916-41ec-9c2c-e6dcabed0f65",
+    "name": "Apptio Technology Business Management Budgets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for the Apptio technology business management platform, providing programmatic access to cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and planning teams.\n\nContact Support:\n Name: Apptio Developer",
+      "type": "text/plain"
+    }
+  }
+}

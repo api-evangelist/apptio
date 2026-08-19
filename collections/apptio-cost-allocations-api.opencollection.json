@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apptio Technology Business Management Budgets Cost Allocations API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cost Allocations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apptio - List Cost Allocations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apptio.com/v1/cost-allocations",
+            "params": [
+              {
+                "name": "period",
+                "value": "",
+                "type": "query",
+                "description": "Filter by reporting period (YYYY-MM format)"
+              },
+              {
+                "name": "costCenter",
+                "value": "",
+                "type": "query",
+                "description": "Filter by cost center or department"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "Filter by technology cost category"
+              }
+            ]
+          },
+          "docs": "Returns a list of technology cost allocations by period and cost center"
+        },
+        {
+          "info": {
+            "name": "Apptio - Get Cost Allocation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apptio.com/v1/cost-allocations/:allocationId",
+            "params": [
+              {
+                "name": "allocationId",
+                "value": "",
+                "type": "path",
+                "description": "Unique cost allocation identifier"
+              }
+            ]
+          },
+          "docs": "Returns details for a specific cost allocation record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

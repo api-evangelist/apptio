@@ -1,0 +1,395 @@
+{
+  "item": [
+    {
+      "id": "b55d0352-5529-4865-893e-b9cf9c9d7425",
+      "name": "Cost Allocations",
+      "description": {
+        "content": "Technology cost allocation management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "316a3504-8a3d-4e67-948c-cc2034f59496",
+          "name": "Apptio - List Cost Allocations",
+          "request": {
+            "name": "Apptio - List Cost Allocations",
+            "description": {
+              "content": "Returns a list of technology cost allocations by period and cost center",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cost-allocations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "period",
+                  "value": "<string>",
+                  "description": "Filter by reporting period (YYYY-MM format)"
+                },
+                {
+                  "disabled": false,
+                  "key": "costCenter",
+                  "value": "<string>",
+                  "description": "Filter by cost center or department"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>",
+                  "description": "Filter by technology cost category"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9022dabb-9221-47cc-99f4-c0cdc33f31b9",
+              "name": "A list of cost allocations",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cost-allocations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "period",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "costCenter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"allocationId\": \"ALLOC-2026-Q1-001\",\n      \"costCenter\": \"Engineering\",\n      \"category\": \"Cloud Infrastructure\",\n      \"period\": \"2026-01\",\n      \"amount\": 125000,\n      \"currency\": \"USD\",\n      \"vendor\": \"AWS\"\n    }\n  ],\n  \"total\": 125000\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37d15719-6524-4544-954c-9c81427368c8",
+              "name": "Unauthorized - invalid or missing authentication token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cost-allocations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "period",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "costCenter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9676b9b7-fd95-4679-ac42-19cc5b13ed1f",
+          "name": "Apptio - Get Cost Allocation",
+          "request": {
+            "name": "Apptio - Get Cost Allocation",
+            "description": {
+              "content": "Returns details for a specific cost allocation record",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cost-allocations",
+                ":allocationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "allocationId",
+                  "description": "(Required) Unique cost allocation identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0a0454a1-f8e7-4424-ba74-3ec36ccef8fd",
+              "name": "Cost allocation details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cost-allocations",
+                    ":allocationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "allocationId",
+                      "description": "(Required) Unique cost allocation identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"allocationId\": \"ALLOC-2026-Q1-001\",\n  \"costCenter\": \"Engineering\",\n  \"category\": \"Cloud Infrastructure\",\n  \"period\": \"2026-01\",\n  \"amount\": 125000,\n  \"currency\": \"USD\",\n  \"vendor\": \"AWS\",\n  \"tags\": {\n    \"environment\": \"production\",\n    \"team\": \"platform\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b17efa45-f374-442e-86c5-263c25dc5cd4",
+              "name": "Unauthorized - invalid or missing authentication token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cost-allocations",
+                    ":allocationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "allocationId",
+                      "description": "(Required) Unique cost allocation identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a5be6520-e8ef-457c-ab0d-a8912acf1b85",
+              "name": "Cost allocation not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cost-allocations",
+                    ":allocationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "allocationId",
+                      "description": "(Required) Unique cost allocation identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.apptio.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "af748e82-e0d6-49fb-a923-d59c6ba35529",
+    "name": "Apptio Technology Business Management Budgets Cost Allocations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for the Apptio technology business management platform, providing programmatic access to cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and planning teams.\n\nContact Support:\n Name: Apptio Developer",
+      "type": "text/plain"
+    }
+  }
+}
