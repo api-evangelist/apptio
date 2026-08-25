@@ -1,11 +1,8 @@
 aid: apptio
 name: Apptio
-description: >-
-  Apptio is a technology business management platform that helps organizations
-  understand the cost, value, and quality of their technology investments. It
-  provides financial management, planning, and analytics capabilities for IT
-  organizations, enabling data-driven decision-making around technology spending
-  and resource allocation.
+description: Apptio is a technology business management platform that helps organizations understand the cost, value,
+  and quality of their technology investments. It provides financial management, planning, and analytics capabilities
+  for IT organizations, enabling data-driven decision-making around technology spending and resource allocation.
 type: Index
 accessModel:
   pricing: freemium
@@ -22,14 +19,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apptio.png
 tags:
-  - Analytics
-  - Cost Management
-  - IT Finance
-  - Technology Business Management
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/apptio/refs/heads/main/apis.yml
+- Analytics
+- Cost Management
+- IT Finance
+- Technology Business Management
+url: https://raw.githubusercontent.com/api-evangelist/apptio/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-08-21'
 specificationVersion: '0.23'
 apis:
 - aid: apptio:apptio-budgets-api
@@ -102,29 +98,38 @@ apis:
   - type: Vocabulary
     url: vocabulary/apptio-vocabulary.yaml
 common:
-  - type: AgenticAccess
-    url: agentic-access/apptio-agentic-access.yml
-  - type: DomainSecurity
-    url: security/apptio-domain-security.yml
-  - type: Authentication
-    url: authentication/apptio-authentication.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/apptio-an-ibm-company
-  - type: Website
-    url: https://www.apptio.com/
-  - type: Documentation
-    url: https://developer.apptio.com/
-  - type: Blog
-    url: https://www.apptio.com/blog/
-  - type: Signup
-    url: https://www.apptio.com/request-demo/
-  - type: GitHubOrganization
-    url: https://github.com/apptio
-  - type: Integrations
-    url: https://www.apptio.com/company/partners/
+- type: ParentCompany
+  url: https://apis.io/providers/ibm/
+  name: Ibm
+  x-relationship: acquisition
+  x-generated-by: ibm-family:2026-08-21
+  x-acquired: 2023
+- type: AgenticAccess
+  url: agentic-access/apptio-agentic-access.yml
+- type: DomainSecurity
+  url: security/apptio-domain-security.yml
+- type: Authentication
+  url: authentication/apptio-authentication.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/apptio-an-ibm-company
+- type: Website
+  url: https://www.apptio.com/
+- type: Documentation
+  url: https://developer.apptio.com/
+- type: Blog
+  url: https://www.apptio.com/blog/
+- type: Signup
+  url: https://www.apptio.com/request-demo/
+- type: GitHubOrganization
+  url: https://github.com/apptio
+- type: Integrations
+  url: https://www.apptio.com/company/partners/
 integrations:
-  - name: Apptio
-  - name: ApptioCareers-Employee[1]
+- name: Apptio
+- name: ApptioCareers-Employee[1]
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-parent: ibm
+x-relationship: acquisition
+x-acquired: 2023
