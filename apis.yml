@@ -4,6 +4,18 @@ description: Apptio is a technology business management platform that helps orga
   and quality of their technology investments. It provides financial management, planning, and analytics capabilities
   for IT organizations, enabling data-driven decision-making around technology spending and resource allocation.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
