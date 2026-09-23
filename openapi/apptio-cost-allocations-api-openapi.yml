@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Apptio Technology Business Management Budgets Cost Allocations API
+  title: Apptio Technology Business Management Cost Allocations API
   description: API for the Apptio technology business management platform, providing programmatic access to cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and planning teams.
   version: 1.0.0
   contact:

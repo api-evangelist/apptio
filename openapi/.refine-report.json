@@ -1,9 +1,7 @@
 {
   "provider": "apptio",
   "sources": [
-    "apptio-budgets-api-openapi.yml",
-    "apptio-cost-allocations-api-openapi.yml",
-    "apptio-reports-api-openapi.yml"
+    "_original/apptio-openapi.yaml"
   ],
   "outputs": [
     "apptio-budgets-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apptio-openapi.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "apptio-budgets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apptio-cost-allocations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apptio-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
