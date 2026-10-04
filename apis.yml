@@ -111,6 +111,9 @@ apis:
   - type: Vocabulary
     url: vocabulary/apptio-vocabulary.yaml
 common:
+- type: CapabilityMap
+  url: capabilities/apptio-capability-edges.yml
+  name: Apptio Business Capability Map
 - type: ParentCompany
   url: https://apis.io/providers/ibm/
   name: Ibm
