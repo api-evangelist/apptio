@@ -18,19 +18,20 @@ edges:
   capability_id: BC-600.80
   capability_id_l1: BC-600
   capability_name: IT Financial Management
-  confidence: 0.78
-  evidence: GET /cost-allocations listCostAllocations 'Apptio - List Cost Allocations'; 'programmatic
-    access to cost allocations, IT financial data'
-  reason: Allocation of technology costs to consumers/services is the core of IT financial management
-    (showback/chargeback, IT cost optimisation) for this TBM vendor.
+  confidence: 0.8
+  evidence: GET /cost-allocations listCostAllocations 'Apptio - List Cost Allocations'; schema CostAllocation;
+    'providing programmatic access to cost allocations, IT financial data'
+  reason: Allocation of technology costs to consumers is the core of IT chargeback/showback and IT cost
+    optimisation under IT Financial Management.
 - tag: Budgets
   spec_file: apptio-budgets-api-openapi.yml
   capability_id: BC-600.80
   capability_id_l1: BC-600
   capability_name: IT Financial Management
-  confidence: 0.7
-  evidence: 'GET /budgets listBudgets ''Apptio - List Budgets''; description: ''IT financial data, budgets,
-    and technology investment analytics for IT finance and planning teams'''
-  reason: Apptio is a technology business management platform; the budget objects here are IT budgets
-    held by IT finance teams, which is IT Financial Management (IT spend, chargeback, cost optimisation)
-    rather than generic enterprise budgeting. Some ambiguity vs BC-230.10, hence moderate confidence.
+  confidence: 0.75
+  evidence: 'GET /budgets listBudgets ''Apptio - List Budgets''; description: ''programmatic access to
+    cost allocations, IT financial data, budgets, and technology investment analytics for IT finance and
+    planning teams'''
+  reason: Budgets here are IT budgets inside a Technology Business Management platform, i.e. IT spend
+    planning rather than generic enterprise budgeting; IT Financial Management is the closest honest fit,
+    though BC-230.10 is an adjacent reading.
