@@ -1,4 +1,4 @@
-# Apptio (apptio)
+# Apptio
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,57 +64,158 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Apptio is a technology business management platform that helps organizations understand the cost, value, and quality of their technology investments. It provides financial management, planning, and analytics capabilities for IT organizations, enabling data-driven decision-making around technology spending, budget planning, and resource allocation.
+Apptio is a technology business management platform that helps organizations understand the cost, value, and quality of their technology investments. It provides financial management, planning, and analytics capabilities for IT organizations, enabling data-driven decision-making around technology spending and resource allocation.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/apptio/refs/heads/main/apis.yml)
+**Areas:** Analytics · Cost Management · IT Finance · Technology Business Management
 
-## Scope of Coverage
+## Apptio on APIs.io
 
-| Item | Count |
-|------|-------|
-| APIs | 1 |
-| OpenAPI Specs | 1 |
-| JSON Schemas | 1 |
-| JSON Structures | 1 |
-| Examples | 1 |
-| JSON-LD Contexts | 1 |
-| Spectral Rulesets | 1 |
-| Naftiko Capabilities | 2 |
-| Vocabularies | 1 |
+Everything profiled for Apptio is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apptio/](https://apis.io/providers/apptio/)** — or go straight to one of the APIs or properties below.
 
-## APIs Covered
+### APIs (3)
 
-- **Apptio API** — Technology business management API for cost allocations, IT budgets, and financial reporting.
+- [Apptio Budgets API](https://apis.io/apis/apptio/apptio-budgets-api/) — IT budget planning and tracking
+- [Apptio Cost Allocations API](https://apis.io/apis/apptio/apptio-cost-allocations-api/) — Technology cost allocation management
+- [Apptio Reports API](https://apis.io/apis/apptio/apptio-reports-api/) — Financial reporting and analytics
 
-## Artifacts
+### Published properties
 
-### OpenAPI Specifications
-- [openapi/apptio-openapi.yaml](openapi/apptio-openapi.yaml)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### JSON Schemas
-- [json-schema/cost-allocation-schema.json](json-schema/cost-allocation-schema.json)
+#### Agentic access (1)
 
-### JSON Structures
-- [json-structure/cost-allocation-structure.json](json-structure/cost-allocation-structure.json)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### Examples
-- [examples/cost-allocation-example.json](examples/cost-allocation-example.json)
+- [Apptio Agentic Access](https://apis.io/agentic-access/apptio/apptio-agentic-access/)
 
-### JSON-LD
-- [json-ld/apptio-context.jsonld](json-ld/apptio-context.jsonld)
+#### JSON Schema (1)
 
-### Spectral Rules
-- [rules/apptio-spectral-rules.yml](rules/apptio-spectral-rules.yml)
+The data models the API reads and writes.
 
-### Naftiko Capabilities
-- [capabilities/shared/apptio-api.yaml](capabilities/shared/apptio-api.yaml)
-- [capabilities/it-cost-management.yaml](capabilities/it-cost-management.yaml)
+- [CostAllocation](https://apis.io/schemas/apptio/cost-allocation/)
 
-### Vocabulary
-- [vocabulary/apptio-vocabulary.yaml](vocabulary/apptio-vocabulary.yaml)
+#### JSON Structure (1)
 
-## Maintainers
+Data models expressed in JSON Structure.
 
-**FN:** API Evangelist
+- [Cost Allocation Structure](https://apis.io/json-structure/apptio/cost-allocation-structure/)
 
-**Email:** info@apievangelist.com
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apptio Context](https://apis.io/jsonld/apptio/apptio-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apptio Vocabulary](https://apis.io/vocabularies/apptio/apptio-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Cost Allocation Example](https://apis.io/examples/apptio/cost-allocation-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Apptio Technology Business Management Budgets API](https://apis.io/collections/apptio/open-apptio-budgets-api/)
+- [Apptio Technology Business Management Budgets Cost Allocations API](https://apis.io/collections/apptio/open-apptio-cost-allocations-api/)
+- [Apptio Technology Business Management Budgets Reports API](https://apis.io/collections/apptio/open-apptio-reports-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apptio — jsonschema rules](https://apis.io/rules/apptio/apptio-jsonschema-spectral-rules/)
+- [Apptio API Rules](https://apis.io/rules/apptio/apptio-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apptio Authentication](https://apis.io/security/apptio/apptio-authentication/)
+- [Apptio Domain Security](https://apis.io/security/apptio/apptio-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apptio Plans Pricing](https://apis.io/plans/apptio/apptio-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apptio Rate Limits](https://apis.io/rate-limits/apptio/apptio-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apptio Finops](https://apis.io/finops/apptio/apptio-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apptio.com/)
+- [Documentation](https://developer.apptio.com/)
+- [Blog](https://www.apptio.com/blog/)
+- [GitHub](https://github.com/apptio)
+
+## API Evangelist rating
+
+**Kin Score 33.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 64.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 26.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apptio/](https://apis.io/providers/apptio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apptio: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apptio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
